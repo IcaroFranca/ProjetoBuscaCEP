@@ -24,7 +24,7 @@
     <main>
       <section id="form-section" class="form-container">
         <div class="card-form">
-          <form name="new-address">
+          <form name="newAddress">
             <div class="form-control">
               <label for="cep">CEP:</label>
               <input
@@ -34,7 +34,7 @@
                 type="text"
                 placeholder="CEP"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="cep"></div>
             </div>
             <div class="form-control">
               <label for="street">Logradouro:</label>
@@ -56,13 +56,13 @@
                 type="text"
                 placeholder="Número"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="number"></div>
             </div>
             <div class="form-control">
-              <label for="cep">Cidade:</label>
+              <label for="city">Cidade:</label>
               <input
-                name="cidade"
-                id="cidade"
+                name="city"
+                id="city"
                 class="form-input"
                 type="text"
                 placeholder="Cidade"
@@ -70,24 +70,24 @@
               />
             </div>
             <div class="btn-container">
-              <button class="btn btn-left" type="submit">Salvar</button>
-              <button class="btn btn-right">Limpar</button>
+              <button name="btnSave" class="btn btn-left" type="submit">Salvar</button>
+              <button name="btnClear" class="btn btn-right">Limpar</button>
             </div>
           </form>
         </div>
       </section>
       <section id="list-section" class="list-container">
-        <div class="card-list-item">
-          <h3>São Paulo</h3>
-          <p class="address-line">Rua dos jardins, 720</p>
-          <p class="address-cep">11200-345</p>
-        </div>
-        <div class="card-list-item">
-          <h3>São Paulo</h3>
-          <p class="address-line">Rua dos jardins, 720</p>
-          <p class="address-cep">11200-345</p>
-        </div>
       </section>
     </main>
+    <section id="modal-contact" class="modal-container">
+      <div class="modal-box">
+        <div class="modal-content">
+          <p>@godicarus6616</p>
+        </div>
+        <button id="modal-contact-close" class="btn">Fechar</button>
+      </div>
+    </section>
+
+    <script type="module" src="js/buscacep.js"></script>
   </body>
 </html>
